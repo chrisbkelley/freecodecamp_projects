@@ -12,15 +12,10 @@ def calculate(input_list):
     #creates lists of mean, variance, standard dev, max, min and sum of each dimesion and flattened value
     #TODO: write a function to eliminate the code reuse
     mean_list = [np.mean(reshaped_list, axis=0).tolist(),np.mean(reshaped_list, axis=1).tolist(),np.mean(reshaped_list).tolist()]
-
     var_list = [np.var(reshaped_list, axis=0).tolist(),np.var(reshaped_list, axis=1).tolist(),np.var(reshaped_list).tolist()]
-
     std_list = [np.std(reshaped_list, axis=0).tolist(), np.std(reshaped_list, axis=1).tolist(), np.std(reshaped_list).tolist()]
-
     max_list = [np.amax(reshaped_list, axis=0).tolist(),np.amax(reshaped_list, axis=1).tolist(),np.amax(reshaped_list).tolist()]
-
     min_list = [np.amin(reshaped_list, axis=0).tolist(),np.amin(reshaped_list, axis=1).tolist(),np.amin(reshaped_list).tolist()]
-
     sum_list = [np.sum(reshaped_list, axis=0).tolist(),np.sum(reshaped_list, axis=1).tolist(),np.sum(reshaped_list).tolist()]
 
     # make a dictionary of lists

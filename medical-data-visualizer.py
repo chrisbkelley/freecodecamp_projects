@@ -34,7 +34,7 @@ def draw_cat_plot():
     df_cat['total'] = 1
 
     # Draw the catplot with 'sns.catplot()'
-
+    fig = plt.figure()
     sns.catplot(x="variable", y="total", col="cardio", data=df_cat, kind="bar", hue="value", estimator=sum)
 
     # Do not modify the next two lines

@@ -12,7 +12,7 @@ overweight_formula = df['weight']/(df['height']*.01)**2
 
 #set binary values in overweight col based on results of formula
 df.loc[overweight_formula > 25, 'overweight'] = 1
-df.loc[overweight_formula < 26, 'overweight'] = 0
+df.loc[overweight_formula <= 25, 'overweight'] = 0
 
 #the formula returns a float but it should be an integer datatype
 df['overweight'] = df['overweight'].astype(int)

@@ -64,7 +64,7 @@ def draw_heat_map():
 
     # Draw the heatmap with 'sns.heatmap()'
 
-    sns.heatmap(corr, mask=mask, annot=True)
+    sns.heatmap(corr, mask=mask, annot=True, fmt=".1f")
 
     # Do not modify the next two lines
     fig.savefig('heatmap.png')

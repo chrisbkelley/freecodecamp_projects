@@ -34,8 +34,11 @@ def draw_cat_plot():
     df_cat['total'] = 1
 
     # Draw the catplot with 'sns.catplot()'
-    fig = plt.figure()
-    sns.catplot(x="variable", y="total", col="cardio", data=df_cat, kind="bar", hue="value", estimator=sum)
+    fig = sns.catplot(x="variable", y="total", col="cardio", data=df_cat, kind="bar", hue="value", estimator=sum)
+    fig.set_ylabels('total')
+    fig.set_xlabels('variable')
+
+    fig = fig.fig
 
     # Do not modify the next two lines
     fig.savefig('catplot.png')
@@ -60,11 +63,11 @@ def draw_heat_map():
 
 
     # Set up the matplotlib figure
-    fig, ax = plt.subplots(figsize=(12,6))
+    fig, ax= plt.subplots(figsize=(12,6))
 
     # Draw the heatmap with 'sns.heatmap()'
 
-    sns.heatmap(corr, mask=mask, annot=True, fmt=".1f")
+    ax = sns.heatmap(corr, mask=mask, annot=True, fmt=".1f")
 
     # Do not modify the next two lines
     fig.savefig('heatmap.png')
